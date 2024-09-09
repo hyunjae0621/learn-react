@@ -1,3 +1,4 @@
+import Card from "./components/Card";
 
 function App() {
   //logic
@@ -39,7 +40,7 @@ const user2 = {
   id : "guswo57",
   password : 'password',
   isLoggedIn : false
-}
+};
 
 if (user2.id==="guswo57" && user2.password==='password') {
   // 1차 조건 판별
@@ -49,7 +50,82 @@ if (user2.id==="guswo57" && user2.password==='password') {
 
 
   // view
-  return <div>Hello World!!!!</div>;
+  return <>
+          <div>Hello World!!!!</div>
+
+          <Card /> </>
 };
 
 export default App;
+
+
+
+//Default parameter 매개변수 - 
+
+const greet = (input = '고객') => {
+
+  return `${input}님, 반갑습니다`;
+
+};
+
+console.log(greet());
+
+
+//구조분해 할당
+
+const studentName = ['김태욱','김현호','장현재'];
+
+const addStudent = () => {
+  studentName.push("박건영");
+  console.log("studentList",studentName);
+
+  
+}
+
+addStudent();
+
+
+
+const [name1, name2] = studentName;
+
+
+// 위에 함수를 여러줄로 나타내면 이렇게 된다구 
+// const name1 = studentName[0]
+// const name2 = studentName[1]
+// const name3 = studentName[2]
+
+console.log("name1",name1);
+console.log("name2",name2);
+
+
+
+// 객체 구조분해 할당
+
+const person = {
+  name : "장현재",
+  age : 35,
+  email : "allpredance@gmail.com"
+
+};
+
+const messageItem = {
+  messagenumber : 1,
+  message : "하이요"
+};
+
+
+const {name, age, email} = person;
+console.log("🚀 ~ name:", name);
+console.log("🚀 ~ age:", age);
+console.log("🚀 ~ email:", email);
+
+
+const copyPerson = {
+    ...person,
+    ...messageItem,
+    name:"쎄오",
+    nickName: "로봇트" };
+console.log("🚀copyPerson", copyPerson);
+
+
+
