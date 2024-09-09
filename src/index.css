@@ -11,3 +11,107 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  max-width: 230px;
+  border: 1px solid;
+  padding: 16px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-style: italic;
+
+}
+
+.card-description{
+
+  font-size: 14px;
+}
+
+.card-button {
+  background-color: black;
+  color: white;
+  font-weight: 800;
+  border-radius: 10px;
+  border-color: gray ;
+  border-width: 10px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.login-title {
+
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+
+.login-box {
+
+  max-width: 200px;
+
+  border: 1px solid;
+
+  margin: 20px;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  color: white;
+
+
+}
+
+.InputField {
+  width: 180px;
+  height: 20px;
+  background-color: rgb(195, 195, 195);
+  border-radius: 5px;
+  border-width: 0;
+  margin-bottom: 5px;
+}
+
+.password {
+  width: 180px;
+  height: 20px;
+  background-color: rgb(195, 195, 195);
+  border-radius: 5px;
+  border-width: 0;
+  margin-bottom: 5px;
+
+}
+
+.Loginbutton {
+  font-size: 10px;
+  width: 180px;
+  height: 20px;
+  border-radius: 3px;
+  border-color: none;
+}
+
+.no-id {
+
+  font-size: 12px;
+}
+
+.SocialButton {
+
+background-color: black;
+color: white;
+  font-size: 10px;
+  width: 180px;
+  height: 20px;
+  border-radius: 3px;
+  border-color: white;
+  border-width: 1px;
+  margin-bottom: 20px;
+}
