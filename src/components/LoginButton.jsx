@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 
 const LoginButton = ({text, onClick, className, disabled}) => {
 

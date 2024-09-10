@@ -1,7 +1,8 @@
 //import Card from "./components/Card";
 
 // import Card from "./components/Card";
-// import Counter from "./components/Counter";
+import Counter from "./components/Counter";
+import Counter2 from "./components/Counter2";
 import Login from "./pages/Login";
 import React from 'react'
 
@@ -16,8 +17,9 @@ function App() {
   return <>
           
         <div className="App">
+          <Counter2 />
           <Login />
-          {/* <Counter /> */}
+          <Counter />
           {/* <Card title={"에일리짱"}
           subText={"에일리짱짱"}  
           onCardClick={handleClick}/>
