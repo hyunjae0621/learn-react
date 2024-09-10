@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const LoginButton = () => {
+const LoginButton = ({text, onClick, className, disabled}) => {
+
+
+
   return (
-    <button type='button' className='Loginbutton'>Login</button>
+    <button type='button' onClick={onClick} className={className} 
+    disabled={disabled}>{text}</button>
   )
 }
 

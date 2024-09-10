@@ -1,8 +1,52 @@
 //import Card from "./components/Card";
+
+// import Card from "./components/Card";
+// import Counter from "./components/Counter";
 import Login from "./pages/Login";
 import React from 'react'
 
 function App() {
+
+// const handleClick = () => {
+
+//   console.log("App 클릭!!!")
+
+// }
+
+  return <>
+          
+        <div className="App">
+          <Login />
+          {/* <Counter /> */}
+          {/* <Card title={"에일리짱"}
+          subText={"에일리짱짱"}  
+          onCardClick={handleClick}/>
+          <Card title={"구글SEO"}
+          subText={"떠먹여드립니다"}
+          onCardClick={() => console.log("App 클릭")}/> */}
+          </div>
+          </>
+          
+  };
+
+  export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //logic
     // console.log("App.js")
 
@@ -54,88 +98,80 @@ function App() {
 
 
   // view
-  return <>
-          
-        <div className="App">
-          <Login />
-          </div>
-          </>
-          
-};
 
 //    <Card /> 가 컴포넌트를 호출하는 문법임.
 
 
-export default App;
+
 
 
 
 //Default parameter 매개변수 - 
 
-const greet = (input = '고객') => {
+// const greet = (input = '고객') => {
 
-  return `${input}님, 반갑습니다`;
+//   return `${input}님, 반갑습니다`;
 
-};
+// };
 
-console.log(greet());
+// console.log(greet());
 
 
-//구조분해 할당
+// //구조분해 할당
 
-const studentName = ['김태욱','김현호','장현재'];
+// const studentName = ['김태욱','김현호','장현재'];
 
-const addStudent = () => {
-  studentName.push("박건영");
-  console.log("studentList",studentName);
+// const addStudent = () => {
+//   studentName.push("박건영");
+//   console.log("studentList",studentName);
 
   
-}
+// }
 
-addStudent();
-
-
-
-const [name1, name2] = studentName;
-
-
-// 위에 함수를 여러줄로 나타내면 이렇게 된다구 
-// const name1 = studentName[0]
-// const name2 = studentName[1]
-// const name3 = studentName[2]
-
-console.log("name1",name1);
-console.log("name2",name2);
+// addStudent();
 
 
 
-// 객체 구조분해 할당
-
-const person = {
-  name : "장현재",
-  age : 35,
-  email : "allpredance@gmail.com"
-
-};
-
-const messageItem = {
-  messagenumber : 1,
-  message : "하이요"
-};
+// const [name1, name2] = studentName;
 
 
-const {name, age, email} = person;
-console.log("🚀 ~ name:", name);
-console.log("🚀 ~ age:", age);
-console.log("🚀 ~ email:", email);
+// // 위에 함수를 여러줄로 나타내면 이렇게 된다구 
+// // const name1 = studentName[0]
+// // const name2 = studentName[1]
+// // const name3 = studentName[2]
+
+// console.log("name1",name1);
+// console.log("name2",name2);
 
 
-const copyPerson = {
-    ...person,
-    ...messageItem,
-    name:"쎄오",
-    nickName: "로봇트" };
-console.log("🚀copyPerson", copyPerson);
+
+// // 객체 구조분해 할당
+
+// const person = {
+//   name : "장현재",
+//   age : 35,
+//   email : "allpredance@gmail.com"
+
+// };
+
+// const messageItem = {
+//   messagenumber : 1,
+//   message : "하이요"
+// };
+
+
+// const {name, age, email} = person;
+// console.log("🚀 ~ name:", name);
+// console.log("🚀 ~ age:", age);
+// console.log("🚀 ~ email:", email);
+
+
+// const copyPerson = {
+//     ...person,
+//     ...messageItem,
+//     name:"쎄오",
+//     nickName: "로봇트" };
+// console.log("🚀copyPerson", copyPerson);
 
 
 
