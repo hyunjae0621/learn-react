@@ -14,7 +14,7 @@ code {
 
 #root {
 
-  display: flex;
+  
   flex-wrap: wrap;
 }
 
@@ -23,11 +23,11 @@ code {
   border: 1px solid;
   padding: 16px;
   border-radius: 10px;
-  margin: 20px;
+  margin: 0px;
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 20px;
   font-style: italic;
 
 }
@@ -44,7 +44,6 @@ code {
   border-radius: 10px;
   border-color: gray ;
   border-width: 10px;
-  margin-top: 20px;
   padding: 10px;
 }
 
@@ -164,4 +163,23 @@ color: white;
 
   font-size: 10px;
   
+}
+
+
+.wrap {
+
+  height: 100vh;
+
+}
+
+.dark-mode {
+background-color: #333;
+color: #fff;
+
+}
+
+.light-mode {
+
+  background-color: #fff;
+  color : #333;
 }

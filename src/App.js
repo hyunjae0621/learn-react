@@ -1,10 +1,11 @@
-//import Card from "./components/Card";
+import Card from "./components/Card";
 
-// import Card from "./components/Card";
-import Counter from "./components/Counter";
-import Counter2 from "./components/Counter2";
-import Login from "./pages/Login";
-import React from 'react'
+
+// import Counter from "./components/Counter";
+// import Counter2 from "./components/Counter2";
+// import Login from "./pages/Login";
+import React, { useState } from 'react'
+import ThemeButton from "./components/ThemeButton";
 
 function App() {
 
@@ -14,18 +15,57 @@ function App() {
 
 // }
 
+  /**
+   * 1.ThemeButton에 온클릭 이벤트를 만든다.
+   * 2.버튼이 눌려졌다는 이벤트를 부모 컴포넌트에 전송한다.
+   * (onTheme) 이벤트
+   * 3.이벤트를 받으면 div 클래스를 변환하는 함수를 생성한다.
+   * (handleTheme)
+   * 4.부모 컴포넌트의 div 클래스 부분을 변수처리 한다.
+   * [state] isDarkMode라는 state를 생성한다.
+   * 5.isDarkMode state를 wrap 클래스가 있는 div에 className의 속성을 다르게 넣어준다.
+   * 5-1.다크모드인 경우엔 'dark-mode'를 준다
+   * 5-2.다크모드가 아닌 경우엔 'light-mode'라는 클래스를 준다
+   * 6.handleTheme함수에서 isDarkMode의 값을 토글로 변경해준다
+   * 7. ThemeButton 컴포넌트에  isDarkMode라는 props를 내려준다.
+   * 7-1. 이 props에는 isDarkMode의 값을 넣어준다.
+   * 8. ThemeButton 컴포넌트에 isDarkMode의 값을 받아서 true인 경우엔 "다크모드" false인 경우엔 "라이트모드"
+   * 버튼을 클릭한다. 
+   * 작동이 잘 되어 바뀌는걸 확인한다. 
+   * 
+   */
+
+  const [isDarkMode, setDarkmode] = useState(false);
+
+const [isLoggedIn,setIsLoggedIn] = useState(false);
+const [message, setMessage] = useState([{text: "안녕하세요", id: 21},{text: 15, id: 22}]);
+
+  const handleTheme = () => {
+
+    setDarkmode(!isDarkMode)
+  }
+
   return <>
           
-        <div className="App">
-          <Counter2 />
+        <div className={`App wrap ${isDarkMode?"dark-mode":"light-mode"}`}>
+          
+          {isLoggedIn? "환영합니다" : "로그인해주세요"}
+          {message.length && <h2>새로운 메시지가 {message.length}개 있습니다.</h2>}
+          {/* <Counter2 />
           <Login />
-          <Counter />
-          {/* <Card title={"에일리짱"}
+          <Counter /> */}
+          <Card title={"에일리짱"}
           subText={"에일리짱짱"}  
-          onCardClick={handleClick}/>
+          onCardClick={() => console.log("App 클릭")}/>
           <Card title={"구글SEO"}
           subText={"떠먹여드립니다"}
-          onCardClick={() => console.log("App 클릭")}/> */}
+          onCardClick={() => console.log("App 클릭")}/> 
+
+          <ThemeButton isDarkmode={isDarkMode} onTheme={handleTheme} />
+
+
+
+
           </div>
           </>
           
