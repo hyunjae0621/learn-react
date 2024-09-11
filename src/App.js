@@ -64,8 +64,6 @@ const [message, setMessage] = useState([{text: "안녕하세요", id: 21},{text:
           <ThemeButton isDarkmode={isDarkMode} onTheme={handleTheme} />
 
 
-
-
           </div>
           </>
           

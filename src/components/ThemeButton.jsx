@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const ThemeButton = ({isDarkmode, onTheme}) => {
   
+
+
+
+  useEffect(() => {
+    console.log(isDarkmode? "다크모드" : "라이트모드")
+
+  },[isDarkmode]);
   
   return (
 
